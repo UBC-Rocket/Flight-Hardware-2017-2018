@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [Free Documents]
+   Generated File[Deploy(58mm).TXT]
+   Generated File[Deploy(58mm).DRL]
+   Generated File[Deploy(58mm).LDP]
+   Generated File[Deploy(58mm).DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 12:08:50 PM On 2018-01-19

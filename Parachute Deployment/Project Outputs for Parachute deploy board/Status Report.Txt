@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [Parachute deploy board.PrjPcb]
+   Generated File[Deploy.TXT]
+   Generated File[Deploy.DRL]
+   Generated File[Deploy.LDP]
+   Generated File[Deploy.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 9:58:54 PM On 2018-01-15
