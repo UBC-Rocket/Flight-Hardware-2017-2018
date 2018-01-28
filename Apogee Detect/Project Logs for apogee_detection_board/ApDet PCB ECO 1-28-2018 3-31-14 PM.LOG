@@ -1,0 +1,26 @@
+Removed Pin From Net: NetName=NetA1_4 Pin=RS1-1
+Removed Pin From Net: NetName=NetA1_6 Pin=RS2-1
+Added Component: Designator=P2(HDR2X3)
+Added Pin To Net: NetName=GND Pin=A1-7
+Added Pin To Net: NetName=VCC Pin=B1-2
+Added Pin To Net: NetName=GND Pin=B1-4
+Added Pin To Net: NetName=GND Pin=B1-5
+Added Pin To Net: NetName=GND Pin=B1-6
+Added Pin To Net: NetName=NetP1_1 Pin=P2-1
+Added Pin To Net: NetName=VCC Pin=P2-2
+Added Pin To Net: NetName=GND Pin=P2-3
+Added Pin To Net: NetName=CAN_5V Pin=P2-4
+Added Pin To Net: NetName=NetP1_5 Pin=P2-5
+Added Pin To Net: NetName=ACT 12V Pin=P2-6
+Added Pin To Net: NetName=NetA1_6 Pin=RS1-1
+Added Pin To Net: NetName=NetA1_4 Pin=RS2-1
+Added Pin To Net: NetName=NetU1_51 Pin=U1-51
+Added Net: Name=NetU1_51
+Added Member To Class: ClassName=Sensors Member=Component A1 LIS331HH Accelerometer
+Added Member To Class: ClassName=Sensors Member=Component B1 MS5607-02BA Barometer
+Added Member To Class: ClassName=Sensors Member=Component CS1 Cap Semi
+Added Member To Class: ClassName=apogee_detection_board Member=Component P2 Header 3X2
+Added Member To Class: ClassName=Sensors Member=Component RS1 Res3
+Added Member To Class: ClassName=Sensors Member=Component RS2 Res3
+Added Room: Name=apogee_detection_board
+Added Room: Name=Sensors

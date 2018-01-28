@@ -1,0 +1,64 @@
+Removed Pin From Net: NetName=VCC Pin=A1-1
+Removed Pin From Net: NetName=NetA1_4 Pin=A1-4
+Removed Pin From Net: NetName=GND Pin=A1-5
+Removed Pin From Net: NetName=NetA1_6 Pin=A1-6
+Removed Pin From Net: NetName=VCC Pin=A1-8
+Removed Pin From Net: NetName=GND Pin=A1-10
+Removed Pin From Net: NetName=GND Pin=A1-12
+Removed Pin From Net: NetName=GND Pin=A1-13
+Removed Pin From Net: NetName=VCC Pin=A1-14
+Removed Pin From Net: NetName=VCC Pin=A1-15
+Removed Pin From Net: NetName=GND Pin=A1-16
+Removed Pin From Net: NetName=VCC Pin=B1-1
+Removed Pin From Net: NetName=GND Pin=B1-3
+Removed Pin From Net: NetName=NetA1_6 Pin=B1-7
+Removed Pin From Net: NetName=NetA1_4 Pin=B1-8
+Removed Pin From Net: NetName=GND Pin=CS1-1
+Removed Pin From Net: NetName=VCC Pin=CS1-2
+Removed Pin From Net: NetName=NetA1_4 Pin=RS1-1
+Removed Pin From Net: NetName=VCC Pin=RS1-2
+Removed Pin From Net: NetName=NetA1_6 Pin=RS2-1
+Removed Pin From Net: NetName=VCC Pin=RS2-2
+Added Component: Designator=A1(LGA16)
+Added Component: Designator=B1(Barometer LCC)
+Added Component: Designator=CS1(C1206)
+Added Component: Designator=P2(HDR2X3)
+Added Component: Designator=RS1(J1-0603)
+Added Component: Designator=RS2(J1-0603)
+Added Pin To Net: NetName=VCC Pin=A1-1
+Added Pin To Net: NetName=NetA1_4 Pin=A1-4
+Added Pin To Net: NetName=GND Pin=A1-5
+Added Pin To Net: NetName=NetA1_6 Pin=A1-6
+Added Pin To Net: NetName=GND Pin=A1-7
+Added Pin To Net: NetName=VCC Pin=A1-8
+Added Pin To Net: NetName=GND Pin=A1-10
+Added Pin To Net: NetName=GND Pin=A1-12
+Added Pin To Net: NetName=GND Pin=A1-13
+Added Pin To Net: NetName=VCC Pin=A1-14
+Added Pin To Net: NetName=VCC Pin=A1-15
+Added Pin To Net: NetName=GND Pin=A1-16
+Added Pin To Net: NetName=VCC Pin=B1-1
+Added Pin To Net: NetName=VCC Pin=B1-2
+Added Pin To Net: NetName=GND Pin=B1-3
+Added Pin To Net: NetName=GND Pin=B1-4
+Added Pin To Net: NetName=GND Pin=B1-5
+Added Pin To Net: NetName=GND Pin=B1-6
+Added Pin To Net: NetName=NetA1_6 Pin=B1-7
+Added Pin To Net: NetName=NetA1_4 Pin=B1-8
+Added Pin To Net: NetName=GND Pin=CS1-1
+Added Pin To Net: NetName=VCC Pin=CS1-2
+Added Pin To Net: NetName=NetP1_1 Pin=P2-1
+Added Pin To Net: NetName=VCC Pin=P2-2
+Added Pin To Net: NetName=GND Pin=P2-3
+Added Pin To Net: NetName=CAN_5V Pin=P2-4
+Added Pin To Net: NetName=NetP1_5 Pin=P2-5
+Added Pin To Net: NetName=ACT 12V Pin=P2-6
+Added Pin To Net: NetName=NetA1_6 Pin=RS1-1
+Added Pin To Net: NetName=VCC Pin=RS1-2
+Added Pin To Net: NetName=NetA1_4 Pin=RS2-1
+Added Pin To Net: NetName=VCC Pin=RS2-2
+Added Pin To Net: NetName=NetU1_51 Pin=U1-51
+Added Net: Name=NetU1_51
+Added Member To Class: ClassName=apogee_detection_board Member=Component P2 Header 3X2
+Added Room: Name=apogee_detection_board
+Added Room: Name=Sensors
