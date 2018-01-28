@@ -1,0 +1,55 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\Tarry\Documents\Altium Projects\Apogee Detect\QuarterRoundPCB.PcbDoc
+Date     : 2018-01-14
+Time     : 5:30:21 PM
+
+Processing Rule : Room Sensors (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (Disabled)(InComponentClass('Sensors'))
+Rule Violations :0
+
+Processing Rule : Room apogee_detection_board (Bounding Region = (0mil, 0mil, 2000mil, 1000mil) (Disabled)(InComponentClass('apogee_detection_board'))
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+   Violation between Modified Polygon: Polygon Not Repour After Edit  (Ground Plane) on Bottom Layer 
+Rule Violations :1
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=7mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=3mil) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=1mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=7mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=200mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=10mil) (Max=10mil) (Preferred=10mil) (All)
+   Violation between Width Constraint: Track (2163.388mil,124.015mil)(2167.324mil,127.951mil) on Top Layer Actual Width = 0mil, Target Width = 10mil
+Rule Violations :1
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=7mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+
+Violations Detected : 2
+Time Elapsed        : 00:00:00

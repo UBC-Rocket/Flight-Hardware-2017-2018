@@ -1,0 +1,12 @@
+Added Component: Designator=P2(HDR2X3)
+Added Pin To Net: NetName=NetP1_1 Pin=P2-1
+Added Pin To Net: NetName=VCC Pin=P2-2
+Added Pin To Net: NetName=GND Pin=P2-3
+Added Pin To Net: NetName=CAN_5V Pin=P2-4
+Added Pin To Net: NetName=NetP1_5 Pin=P2-5
+Added Pin To Net: NetName=ACT 12V Pin=P2-6
+Added Pin To Net: NetName=NetA1_11 Pin=A1-11
+Added Net: Name=NetA1_11
+Added Pin To Net: NetName=NetU1_51 Pin=U1-51
+Added Net: Name=NetU1_51
+Added Member To Class: ClassName=apogee_detection_board Member=Component P2 Header 3X2

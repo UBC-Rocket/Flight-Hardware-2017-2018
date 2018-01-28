@@ -1,0 +1,46 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\Tarry\Documents\Altium Projects\Parachute Deployment\QuarterRoundPCB.PcbDoc
+Date     : 2018-01-14
+Time     : 1:28:02 PM
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+   Violation between Un-Routed Net Constraint: Net NetIG2_2 Between Pad Qm2A-7(38.285mm,29.535mm) on Top Layer And Pad Qm2A-9(38.92mm,32.075mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net NetIG1_2 Between Pad Qm1A-7(38.96mm,17.75mm) on Top Layer And Pad Qm1A-9(39.595mm,20.29mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net NetACT2_2 Between Pad Qm4A-7(28.27mm,41mm) on Top Layer And Pad Qm4A-9(28.905mm,43.54mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net NetACT1_2 Between Pad Qm3A-6(9.785mm,50.465mm) on Top Layer And Pad Qm3A-9(10.42mm,47.925mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net NetACT1_2 Between Pad Qm3A-9(10.42mm,47.925mm) on Top Layer And Pad Qm3A-(13mm,46.5mm) on Top Layer 
+Rule Violations :5
+
+Processing Rule : Clearance Constraint (Gap=0.1mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.5mm) (Conductor Width=0.25mm) (Air Gap=0.25mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.25mm) (Max=0.25mm) (Preferred=0.25mm) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=30mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.025mm) (Max=5mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.5mm) (Max=0.5mm) (Preferred=0.5mm) ((InNet('ACT 12V') OR InNet('GND')))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.25mm) ((InNet('ACT 12V') OR InNet('GND'))),(All)
+Rule Violations :0
+
+
+Violations Detected : 5
+Time Elapsed        : 00:00:00

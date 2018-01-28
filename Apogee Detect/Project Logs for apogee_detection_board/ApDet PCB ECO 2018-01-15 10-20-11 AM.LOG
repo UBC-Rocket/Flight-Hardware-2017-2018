@@ -1,0 +1,12 @@
+Change Component Designator: OldDesignator=* NewDesignator=A1
+Added Component: Designator=P2(HDR2X3)
+Added Pin To Net: NetName=NetCAN Tranciever_7 Pin=P2-1
+Added Pin To Net: NetName=VCC Pin=P2-2
+Added Pin To Net: NetName=GND Pin=P2-3
+Added Pin To Net: NetName=CAN_5V Pin=P2-4
+Added Pin To Net: NetName=NetCAN Tranciever_6 Pin=P2-5
+Added Pin To Net: NetName=ACT 12V Pin=P2-6
+Change Net Name : Old Net Name=Net*_4 New Net Name=NetA1_4
+Change Net Name : Old Net Name=Net*_6 New Net Name=NetA1_6
+Added Member To Class: ClassName=apogee_detection_board Member=Component P2 Header 3X2
+Added Member To Class: ClassName=apogee_detection_board Member=Component U1 STM32F417VET6

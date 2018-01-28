@@ -1,0 +1,28 @@
+Added Component: Designator=P2(HDR2X3)
+Added Component: Designator=R4(J1-0603)
+Added Component: Designator=R5(J1-0603)
+Added Component: Designator=R6(J1-0603)
+Added Component: Designator=R7(J1-0603)
+Added Component: Designator=R8(J1-0603)
+Added Pin To Net: NetName=NetP1_1 Pin=P2-1
+Added Pin To Net: NetName=VCC Pin=P2-2
+Added Pin To Net: NetName=GND Pin=P2-3
+Added Pin To Net: NetName=CAN_5V Pin=P2-4
+Added Pin To Net: NetName=NetP1_5 Pin=P2-5
+Added Pin To Net: NetName=ACT 12V Pin=P2-6
+Added Pin To Net: NetName=NetJTAG_20_9 Pin=R4-1
+Added Pin To Net: NetName=VCC Pin=R4-2
+Added Pin To Net: NetName=NetJTAG_20_7 Pin=R5-1
+Added Pin To Net: NetName=VCC Pin=R5-2
+Added Pin To Net: NetName=NetJTAG_20_13 Pin=R6-1
+Added Pin To Net: NetName=VCC Pin=R6-2
+Added Pin To Net: NetName=NetJTAG_20_5 Pin=R7-1
+Added Pin To Net: NetName=VCC Pin=R7-2
+Added Pin To Net: NetName=NetJTAG_20_3 Pin=R8-1
+Added Pin To Net: NetName=VCC Pin=R8-2
+Added Member To Class: ClassName=apogee_detection_board Member=Component P2 Header 3X2
+Added Member To Class: ClassName=apogee_detection_board Member=Component R4 RTCK PD
+Added Member To Class: ClassName=apogee_detection_board Member=Component R5 RTCK PD
+Added Member To Class: ClassName=apogee_detection_board Member=Component R6 RTCK PD
+Added Member To Class: ClassName=apogee_detection_board Member=Component R7 RTCK PD
+Added Member To Class: ClassName=apogee_detection_board Member=Component R8 RTCK PD

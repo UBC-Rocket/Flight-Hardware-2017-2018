@@ -1,0 +1,43 @@
+Removed Pin From Net: NetName=NetIG1_2 Pin=Qm1A-9
+Removed Pin From Net: NetName=NetIG1_2 Pin=Qm1A-
+Removed Pin From Net: NetName=NetIG1_2 Pin=Qm1A-
+Removed Pin From Net: NetName=NetIG2_2 Pin=Qm2A-9
+Removed Pin From Net: NetName=NetIG2_2 Pin=Qm2A-
+Removed Pin From Net: NetName=NetIG2_2 Pin=Qm2A-
+Removed Pin From Net: NetName=NetACT1_2 Pin=Qm3A-9
+Removed Pin From Net: NetName=NetACT1_2 Pin=Qm3A-
+Removed Pin From Net: NetName=NetACT1_2 Pin=Qm3A-
+Removed Pin From Net: NetName=NetACT2_2 Pin=Qm4A-9
+Removed Pin From Net: NetName=NetACT2_2 Pin=Qm4A-
+Removed Pin From Net: NetName=NetACT2_2 Pin=Qm4A-
+Removed Pin From Net: NetName=NetQm1C_1 Pin=Test_ACT-1
+Removed Pin From Net: NetName=NetQm1C_2 Pin=Test_ACT-2
+Removed Pin From Net: NetName=NetQm1B_1 Pin=Test_ACT-3
+Removed Pin From Net: NetName=NetQm2C_1 Pin=Test_ACT-4
+Removed Pin From Net: NetName=NetQm2C_2 Pin=Test_ACT-5
+Removed Pin From Net: NetName=NetQm2B_1 Pin=Test_ACT-6
+Removed Pin From Net: NetName=NetQm4B_1 Pin=Test_ACT-7
+Removed Pin From Net: NetName=NetQm3B_1 Pin=Test_ACT-8
+Added Component: Designator=R4(J1-0603)
+Added Component: Designator=R5(J1-0603)
+Added Component: Designator=R6(J1-0603)
+Added Component: Designator=R7(J1-0603)
+Added Component: Designator=R8(J1-0603)
+Added Pin To Net: NetName=VCC Pin=CAN Tranciever-5
+Added Pin To Net: NetName=NetJTAG_20_9 Pin=R4-1
+Added Pin To Net: NetName=VCC Pin=R4-2
+Added Pin To Net: NetName=NetJTAG_20_7 Pin=R5-1
+Added Pin To Net: NetName=VCC Pin=R5-2
+Added Pin To Net: NetName=NetJTAG_20_13 Pin=R6-1
+Added Pin To Net: NetName=VCC Pin=R6-2
+Added Pin To Net: NetName=NetJTAG_20_5 Pin=R7-1
+Added Pin To Net: NetName=VCC Pin=R7-2
+Added Pin To Net: NetName=NetJTAG_20_3 Pin=R8-1
+Added Pin To Net: NetName=VCC Pin=R8-2
+Added Member To Class: ClassName=Sheet1 Member=Component R4 RTCK PD
+Added Member To Class: ClassName=Sheet1 Member=Component R5 RTCK PD
+Added Member To Class: ClassName=Sheet1 Member=Component R6 RTCK PD
+Added Member To Class: ClassName=Sheet1 Member=Component R7 RTCK PD
+Added Member To Class: ClassName=Sheet1 Member=Component R8 RTCK PD
+Added Room: Name=Actuators
+Added Room: Name=Sheet1

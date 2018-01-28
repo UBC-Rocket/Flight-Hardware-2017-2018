@@ -1,0 +1,16 @@
+CAMtasticDXP Drill Report
+Serial Number:0000-00-00000
+Drill File: C:\Users\Tarry\Documents\Altium Projects\Parachute Deployment\Project Outputs for Parachute deploy board\cam.drl
+Format: 2.4
+Units: English (Inch)
+Step & Repeat Codes Used: NO
+
+
+TOOL		SIZE		COUNT
+====		======		=====
+
+ 1 		0.0197		34
+ 2 		0.0295		1
+ 3 		0.0354		36
+ 4 		0.1358		2
+ 5 		0.1394		1
