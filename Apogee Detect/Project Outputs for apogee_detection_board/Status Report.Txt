@@ -1,13 +1,13 @@
-Output: NC Drill Files
-Type  : NC Drill
-From  : Project [apogee_detection_board.PrjPcb]
-   Generated File[ApDet.TXT]
-   Generated File[ApDet.DRL]
-   Generated File[ApDet.LDP]
-   Generated File[ApDet.DRR]
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [apogee_detection_board.PrjPcb]
+   Generated File[ApDet.GTP]
+   Generated File[ApDet.RUL]
+   Generated File[ApDet.EXTREP]
+   Generated File[ApDet.REP]
 
 
 Files Generated   : 4
 Documents Printed : 0
 
-Finished Output Generation At 9:35:11 PM On 2018-01-15
+Finished Output Generation At 7:18:01 PM On 2018-02-01
