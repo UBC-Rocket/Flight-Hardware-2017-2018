@@ -1,7 +1,7 @@
-DRC Rules Export File for PCB: C:\Users\Tarry\Documents\Altium Projects\Parachute Deployment\Deploy.PcbDoc
-RuleKind=Clearance|RuleName=Clearance_PWR|Scope=Board|Minimum=9.84
-RuleKind=Width|RuleName=Width_PWR|Scope=Board|Minimum=9.84
-RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=3.94
-RuleKind=Width|RuleName=Width|Scope=Board|Minimum=9.84
-RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=7.87
+DRC Rules Export File for PCB: C:\Users\Tarry\Documents\GitHub\Flight-Hardware-2017-2018\Parachute Deployment\Deploy.PcbDoc
 RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=7.87
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=9.84
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=3.94
+RuleKind=Width|RuleName=Width_PWR|Scope=Board|Minimum=9.84
+RuleKind=Clearance|RuleName=Clearance_PWR|Scope=Board|Minimum=9.84
