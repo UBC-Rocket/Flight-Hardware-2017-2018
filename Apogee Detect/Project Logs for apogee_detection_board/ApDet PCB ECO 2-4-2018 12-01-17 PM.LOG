@@ -1,0 +1,73 @@
+Removed Pin From Net: NetName=VCC Pin=JTAG_20-1
+Removed Pin From Net: NetName=VCC Pin=JTAG_20-2
+Removed Pin From Net: NetName=GND Pin=JTAG_20-4
+Removed Pin From Net: NetName=GND Pin=JTAG_20-6
+Removed Pin From Net: NetName=GND Pin=JTAG_20-8
+Removed Pin From Net: NetName=GND Pin=JTAG_20-10
+Removed Pin From Net: NetName=GND Pin=JTAG_20-12
+Removed Pin From Net: NetName=GND Pin=JTAG_20-14
+Removed Pin From Net: NetName=GND Pin=JTAG_20-16
+Removed Pin From Net: NetName=GND Pin=JTAG_20-18
+Removed Pin From Net: NetName=GND Pin=JTAG_20-20
+Removed Member From Class: ClassName=apogee_detection_board Member=JTAG_20
+Added Component: Designator=J1(PCBComponent_1)
+Added Component: Designator=P2(HDR2X3)
+Added Pin To Net: NetName=VCC Pin=J1-1
+Added Pin To Net: NetName=VCC Pin=J1-2
+Added Pin To Net: NetName=GND Pin=J1-4
+Added Pin To Net: NetName=GND Pin=J1-6
+Added Pin To Net: NetName=GND Pin=J1-8
+Added Pin To Net: NetName=GND Pin=J1-10
+Added Pin To Net: NetName=GND Pin=J1-12
+Added Pin To Net: NetName=GND Pin=J1-14
+Added Pin To Net: NetName=GND Pin=J1-16
+Added Pin To Net: NetName=GND Pin=J1-18
+Added Pin To Net: NetName=GND Pin=J1-20
+Added Pin To Net: NetName=NetP1_1 Pin=P2-1
+Added Pin To Net: NetName=VCC Pin=P2-2
+Added Pin To Net: NetName=GND Pin=P2-3
+Added Pin To Net: NetName=CAN_5V Pin=P2-4
+Added Pin To Net: NetName=NetP1_5 Pin=P2-5
+Change Net Name : Old Net Name=CAN_5V New Net Name=5V
+Change Net Name : Old Net Name=VCC New Net Name=3.3V
+Added Pin To Net: NetName=24V Pin=P1-6
+Added Pin To Net: NetName=24V Pin=P2-6
+Added Net: Name=24V
+Added Pin To Net: NetName=NetA1_11 Pin=A1-11
+Added Pin To Net: NetName=NetA1_11 Pin=U1-51
+Added Net: Name=NetA1_11
+Added Pin To Net: NetName=NetJ1_3 Pin=J1-3
+Added Pin To Net: NetName=NetJ1_3 Pin=R8-1
+Added Pin To Net: NetName=NetJ1_3 Pin=U1-90
+Added Net: Name=NetJ1_3
+Added Pin To Net: NetName=NetJ1_5 Pin=J1-5
+Added Pin To Net: NetName=NetJ1_5 Pin=R7-1
+Added Pin To Net: NetName=NetJ1_5 Pin=U1-77
+Added Net: Name=NetJ1_5
+Added Pin To Net: NetName=NetJ1_7 Pin=J1-7
+Added Pin To Net: NetName=NetJ1_7 Pin=R5-1
+Added Pin To Net: NetName=NetJ1_7 Pin=U1-72
+Added Net: Name=NetJ1_7
+Added Pin To Net: NetName=NetJ1_9 Pin=J1-9
+Added Pin To Net: NetName=NetJ1_9 Pin=R4-1
+Added Pin To Net: NetName=NetJ1_9 Pin=U1-76
+Added Net: Name=NetJ1_9
+Added Pin To Net: NetName=NetJ1_11 Pin=J1-11
+Added Pin To Net: NetName=NetJ1_11 Pin=R1-2
+Added Net: Name=NetJ1_11
+Added Pin To Net: NetName=NetJ1_13 Pin=J1-13
+Added Pin To Net: NetName=NetJ1_13 Pin=R6-1
+Added Pin To Net: NetName=NetJ1_13 Pin=U1-89
+Added Net: Name=NetJ1_13
+Added Pin To Net: NetName=NetJ1_15 Pin=J1-15
+Added Pin To Net: NetName=NetJ1_15 Pin=U1-14
+Added Net: Name=NetJ1_15
+Added Pin To Net: NetName=NetJ1_17 Pin=J1-17
+Added Pin To Net: NetName=NetJ1_17 Pin=R2-2
+Added Net: Name=NetJ1_17
+Added Pin To Net: NetName=NetJ1_19 Pin=J1-19
+Added Pin To Net: NetName=NetJ1_19 Pin=R3-2
+Added Net: Name=NetJ1_19
+Added Member To Class: ClassName=apogee_detection_board Member=Component J1 JTAG-20
+Added Member To Class: ClassName=apogee_detection_board Member=Component P2 Header 3X2
+Added Room: Name=apogee_detection_board
