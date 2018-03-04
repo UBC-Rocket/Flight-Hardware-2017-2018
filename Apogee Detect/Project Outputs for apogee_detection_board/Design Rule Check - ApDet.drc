@@ -1,0 +1,108 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc
+Date     : 3/4/2018
+Time     : 11:07:47 AM
+
+Processing Rule : Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board'))
+   Violation between Room Definition: Between SMT Small Component R10-DBGACK PD (5.35mm,13.6mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) 
+   Violation between Room Definition: Between SMT Small Component C4-Cap Semi (7.4mm,11.15mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) 
+   Violation between Room Definition: Between SMT Small Component C3-Cap Semi (11.3mm,9.05mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) 
+   Violation between Room Definition: Between SMT Small Component R9-DBGACK PD (11.275mm,12.875mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) 
+   Violation between Room Definition: Between LCC Component U1-STM32F417VET6 (36.425mm,25.2mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) 
+   Violation between Room Definition: Between SOIC Component T1-TLE8250GVIO (13.025mm,20.075mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) 
+   Violation between Room Definition: Between DIP Component P1-Header 3X2 (2.81mm,22.69mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) 
+   Violation between Room Definition: Between SMT Small Component C1-Cap Semi (25.325mm,18.825mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) 
+   Violation between Room Definition: Between SMT Small Component C2-Cap Semi (13.025mm,25.55mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) 
+   Violation between Room Definition: Between SMT Small Component R1-RTCK PD (27.85mm,10.425mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) 
+   Violation between Room Definition: Between SMT Small Component R2-DBGRQ PD (20.125mm,11.2mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) 
+   Violation between Room Definition: Between SMT Small Component R3-DBGACK PD (17.625mm,11.175mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) 
+   Violation between Room Definition: Between SMT Small Component R4-RTCK PD (27.1mm,13.1mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) 
+   Violation between Room Definition: Between SMT Small Component R5-RTCK PD (31.35mm,8.475mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) 
+   Violation between Room Definition: Between SMT Small Component R6-RTCK PD (24mm,10.125mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) 
+   Violation between Room Definition: Between SMT Small Component R7-RTCK PD (34.175mm,8.525mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) 
+   Violation between Room Definition: Between SMT Small Component R8-RTCK PD (37.575mm,8.55mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) 
+   Violation between Room Definition: Between DIP Component JTAG_20-JTAG-20 (40.6mm,5.3mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) 
+Rule Violations :18
+
+Processing Rule : Room Sensors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sensors'))
+   Violation between Room Definition: Between Component A1-LIS331HH Accelerometer (19.625mm,29.725mm) on Top Layer And Room Sensors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sensors')) 
+   Violation between Room Definition: Between SOIC Component B1-MS5607-02BA Barometer (20.875mm,24.225mm) on Top Layer And Room Sensors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sensors')) 
+   Violation between Room Definition: Between SMT Small Component CS1-Cap Semi (46.975mm,23.825mm) on Top Layer And Room Sensors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sensors')) 
+   Violation between Room Definition: Between SMT Small Component RS1-Res3 (40.35mm,10.275mm) on Top Layer And Room Sensors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sensors')) 
+   Violation between Room Definition: Between SMT Small Component RS2-Res3 (40.325mm,13.55mm) on Top Layer And Room Sensors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sensors')) 
+Rule Violations :5
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+   Violation between Modified Polygon: Polygon Not Repour After Edit  (Ground Plane) on Bottom Layer 
+   Violation between Modified Polygon: Polygon Not Repour After Edit  (3.3V_L01_P002) on Top Layer 
+Rule Violations :2
+
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
+   Violation between Net Antennae: Track (2.81mm,16.115mm)(4.35mm,14.575mm) on Top Layer 
+   Violation between Net Antennae: Track (11.25mm,14.575mm)(12.39mm,15.715mm) on Top Layer 
+Rule Violations :2
+
+Processing Rule : Silk to Silk (Clearance=0.178mm) (All),(All)
+   Violation between Silk To Silk Clearance Constraint: (0.044mm < 0.178mm) Between Text "20" (16.216mm,3.268mm) on Top Overlay And Track (16.47mm,1.49mm)(16.47mm,6.57mm) on Top Overlay Silk Text to Silk Clearance [0.044mm]
+   Violation between Silk To Silk Clearance Constraint: (0.044mm < 0.178mm) Between Text "19" (16.216mm,5.808mm) on Top Overlay And Track (16.47mm,1.49mm)(16.47mm,6.57mm) on Top Overlay Silk Text to Silk Clearance [0.044mm]
+Rule Violations :2
+
+Processing Rule : Silk To Solder Mask (Clearance=0.076mm) (IsPad),(All)
+   Violation between Silk To Solder Mask Clearance Constraint: (0.013mm < 0.076mm) Between Text "R9" (10.919mm,14.899mm) on Top Overlay And Pad T1-5(11.12mm,17.475mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.013mm]
+Rule Violations :1
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.025mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=0.178mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.025mm) (Max=5.08mm) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (All)
+   Violation between Width Constraint: Track (54.95mm,3.15mm)(55.05mm,3.25mm) on Top Layer Actual Width = 0mm, Target Width = 0.254mm
+Rule Violations :1
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.178mm) (All),(All)
+   Violation between Clearance Constraint: (Collision < 0.178mm) Between Track (20.625mm,32.175mm)(20.625mm,33.725mm) on Top Layer And Pad A1-11(20.625mm,32.175mm) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 0.178mm) Between Track (39.6mm,10.425mm)(39.675mm,10.35mm) on Top Layer And Pad RS1-1(39.6mm,10.275mm) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 0.178mm) Between Track (39.3mm,10.425mm)(39.6mm,10.425mm) on Top Layer And Pad RS1-1(39.6mm,10.275mm) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 0.178mm) Between Track (39.675mm,7.875mm)(39.675mm,10.35mm) on Top Layer And Pad RS1-1(39.6mm,10.275mm) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 0.178mm) Between Track (38.425mm,11.3mm)(39.3mm,10.425mm) on Top Layer And Pad RS1-1(39.6mm,10.275mm) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 0.178mm) Between Track (39.575mm,11.975mm)(39.575mm,13.55mm) on Top Layer And Pad RS2-1(39.575mm,13.55mm) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 0.178mm) Between Track (38.925mm,14.2mm)(39.575mm,13.55mm) on Top Layer And Pad RS2-1(39.575mm,13.55mm) on Top Layer 
+Rule Violations :7
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+   Violation between Un-Routed Net Constraint: Net NetC4_2 Between Pad R10-1(5.35mm,12.85mm) on Top Layer And Pad C4-2(7.4mm,12.5mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net NetC3_2 Between Pad R9-1(11.275mm,12.125mm) on Top Layer And Pad C3-2(11.3mm,10.4mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net NetA1_11 Between Pad A1-11(20.625mm,32.175mm) on Top Layer And Pad U1-95(39.925mm,17.65mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C3-1(11.3mm,7.7mm) on Top Layer And Track (26mm,10.4mm)(26.775mm,11.175mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C4-1(7.4mm,9.8mm) on Top Layer And Track (26mm,10.4mm)(26.775mm,11.175mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Pad RS2-1(39.575mm,13.55mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net NetA1_6 Between Pad U1-93(38.925mm,17.65mm) on Top Layer And Pad RS1-1(39.6mm,10.275mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net CANL Between Track (2.81mm,16.115mm)(4.35mm,14.575mm) on Top Layer And Pad R10-2(5.35mm,14.35mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net CANL Between Pad R10-2(5.35mm,14.35mm) on Top Layer And Track (11.25mm,14.575mm)(12.39mm,15.715mm) on Top Layer 
+Rule Violations :9
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+   Violation between Short-Circuit Constraint: Between Track (20.625mm,32.175mm)(20.625mm,33.725mm) on Top Layer And Pad A1-11(20.625mm,32.175mm) on Top Layer Location : [X = 119.675mm][Y = 99.523mm]
+   Violation between Short-Circuit Constraint: Between Track (39.6mm,10.425mm)(39.675mm,10.35mm) on Top Layer And Pad RS1-1(39.6mm,10.275mm) on Top Layer Location : [X = 138.687mm][Y = 77.713mm]
+   Violation between Short-Circuit Constraint: Between Track (39.3mm,10.425mm)(39.6mm,10.425mm) on Top Layer And Pad RS1-1(39.6mm,10.275mm) on Top Layer Location : [X = 138.54mm][Y = 77.75mm]
+   Violation between Short-Circuit Constraint: Between Track (39.675mm,7.875mm)(39.675mm,10.35mm) on Top Layer And Pad RS1-1(39.6mm,10.275mm) on Top Layer Location : [X = 138.725mm][Y = 77.477mm]
+   Violation between Short-Circuit Constraint: Between Track (38.425mm,11.3mm)(39.3mm,10.425mm) on Top Layer And Pad RS1-1(39.6mm,10.275mm) on Top Layer Location : [X = 138.39mm][Y = 77.802mm]
+   Violation between Short-Circuit Constraint: Between Track (39.575mm,11.975mm)(39.575mm,13.55mm) on Top Layer And Pad RS2-1(39.575mm,13.55mm) on Top Layer Location : [X = 138.625mm][Y = 80.715mm]
+   Violation between Short-Circuit Constraint: Between Track (38.925mm,14.2mm)(39.575mm,13.55mm) on Top Layer And Pad RS2-1(39.575mm,13.55mm) on Top Layer Location : [X = 138.515mm][Y = 81.035mm]
+   Violation between Short-Circuit Constraint: Between Track (27.6mm,31.2mm)(28.875mm,31.2mm) on Top Layer And Pad U1-51(28.875mm,31.2mm) on Top Layer Location : [X = 127.538mm][Y = 98.525mm]
+Rule Violations :8
+
+
+Violations Detected : 55
+Time Elapsed        : 00:00:01

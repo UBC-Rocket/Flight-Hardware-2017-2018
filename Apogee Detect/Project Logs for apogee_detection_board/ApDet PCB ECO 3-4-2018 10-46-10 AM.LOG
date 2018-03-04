@@ -1,0 +1,43 @@
+Removed Pin From Net: NetName=NetP1_5 Pin=T1-6
+Removed Pin From Net: NetName=NetP1_1 Pin=T1-7
+Change Component Footprint: Designator=JTAG_20 Old Footprint=HDR2X10 New Footprint=PCBComponent_1
+Change Component Comment : Designator=JTAG_20 Old Comment=Header 10X2 New Comment=JTAG-20
+Added Component: Designator=P2(HDR2X3)
+Added Component: Designator=R9(J1-0603)
+Added Component: Designator=R10(J1-0603)
+Added Component: Designator=R11(J1-0603)
+Added Component: Designator=R12(J1-0603)
+Added Pin To Net: NetName=VCC Pin=P2-2
+Added Pin To Net: NetName=GND Pin=P2-3
+Added Pin To Net: NetName=CAN_5V Pin=P2-4
+Added Pin To Net: NetName=NetP1_1 Pin=R9-2
+Added Pin To Net: NetName=NetP1_5 Pin=R10-2
+Change Net Name : Old Net Name=CAN_5V New Net Name=5V
+Change Net Name : Old Net Name=VCC New Net Name=3.3V
+Added Pin To Net: NetName=24V Pin=P1-6
+Added Pin To Net: NetName=24V Pin=P2-6
+Added Net: Name=24V
+Added Pin To Net: NetName=NetA1_11 Pin=A1-11
+Added Pin To Net: NetName=NetA1_11 Pin=U1-95
+Added Net: Name=NetA1_11
+Added Pin To Net: NetName=NetP2_1 Pin=P2-1
+Added Pin To Net: NetName=NetP2_1 Pin=R11-2
+Added Net: Name=NetP2_1
+Added Pin To Net: NetName=NetP2_5 Pin=P2-5
+Added Pin To Net: NetName=NetP2_5 Pin=R12-2
+Added Net: Name=NetP2_5
+Added Pin To Net: NetName=NetR9_1 Pin=R9-1
+Added Pin To Net: NetName=NetR9_1 Pin=R11-1
+Added Pin To Net: NetName=NetR9_1 Pin=T1-7
+Added Net: Name=NetR9_1
+Added Pin To Net: NetName=NetR10_1 Pin=R10-1
+Added Pin To Net: NetName=NetR10_1 Pin=R12-1
+Added Pin To Net: NetName=NetR10_1 Pin=T1-6
+Added Net: Name=NetR10_1
+Added Member To Class: ClassName=apogee_detection_board Member=Component JTAG_20 JTAG-20
+Added Member To Class: ClassName=apogee_detection_board Member=Component P2 Header 3X2
+Added Member To Class: ClassName=apogee_detection_board Member=Component R9 DBGACK PD
+Added Member To Class: ClassName=apogee_detection_board Member=Component R10 DBGACK PD
+Added Member To Class: ClassName=apogee_detection_board Member=Component R11 DBGACK PD
+Added Member To Class: ClassName=apogee_detection_board Member=Component R12 DBGACK PD
+Added Room: Name=apogee_detection_board

@@ -1,0 +1,19 @@
+Change Component Footprint: Designator=JTAG_20 Old Footprint=HDR2X10 New Footprint=PCBComponent_1
+Change Component Comment : Designator=JTAG_20 Old Comment=Header 10X2 New Comment=JTAG-20
+Added Component: Designator=P2(HDR2X3)
+Added Pin To Net: NetName=NetP1_1 Pin=P2-1
+Added Pin To Net: NetName=VCC Pin=P2-2
+Added Pin To Net: NetName=GND Pin=P2-3
+Added Pin To Net: NetName=CAN_5V Pin=P2-4
+Added Pin To Net: NetName=NetP1_5 Pin=P2-5
+Change Net Name : Old Net Name=CAN_5V New Net Name=5V
+Change Net Name : Old Net Name=VCC New Net Name=3.3V
+Added Pin To Net: NetName=24V Pin=P1-6
+Added Pin To Net: NetName=24V Pin=P2-6
+Added Net: Name=24V
+Added Pin To Net: NetName=NetA1_11 Pin=A1-11
+Added Pin To Net: NetName=NetA1_11 Pin=U1-95
+Added Net: Name=NetA1_11
+Added Member To Class: ClassName=apogee_detection_board Member=Component JTAG_20 JTAG-20
+Added Member To Class: ClassName=apogee_detection_board Member=Component P2 Header 3X2
+Added Room: Name=apogee_detection_board

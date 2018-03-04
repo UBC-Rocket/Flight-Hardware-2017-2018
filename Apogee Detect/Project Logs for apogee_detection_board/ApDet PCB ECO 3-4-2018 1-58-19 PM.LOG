@@ -1,0 +1,21 @@
+Added Component: Designator=C5(RAD-0.3)
+Added Component: Designator=R11(J1-0603)
+Added Pin To Net: NetName=GND Pin=C5-1
+Added Pin To Net: NetName=3.3V Pin=C5-2
+Added Pin To Net: NetName=CLK Pin=U1-30
+Added Net: Name=CLK
+Added Pin To Net: NetName=CS Pin=U1-29
+Added Net: Name=CS
+Added Net: Name=MISO
+Added Pin To Net: NetName=MOSI Pin=U1-31
+Added Net: Name=MOSI
+Added Net: Name=NetIC1_2
+Added Net: Name=NetIC1_4
+Added Pin To Net: NetName=NetIC1_6 Pin=R11-1
+Added Net: Name=NetIC1_6
+Added Pin To Net: NetName=NetIC1_10 Pin=R11-2
+Added Net: Name=NetIC1_10
+Added Pin To Net: NetName=NETLABEL16 Pin=U1-32
+Added Net: Name=NETLABEL16
+Added Member To Class: ClassName=apogee_detection_board Member=Component C5 Cap
+Added Member To Class: ClassName=apogee_detection_board Member=Component R11 DBGRQ PD

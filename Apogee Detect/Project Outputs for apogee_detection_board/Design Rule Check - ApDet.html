@@ -1,0 +1,537 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD16\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">3/4/2018</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">11:07:47 AM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc" class="file"><acronym title="C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc">C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">55</td></tr>
+</table>
+</td>
+</table><a name="IDORZLCFMDTX2NGEFSGKQHTRA5NLBHAX51RP2VPLLE5PK4ZKPFLGDK"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDKG23GZ0CPLSTL4VKP5OZ2WGRCQ1MDHP25L4RKLD3HNDPEOGIOON">Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board'))</a></td>
+<td class="column2">18</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDIMQ4HCMCHH1HCSCVKMOYNJHL3I1XLPBSK2KMIKDDL2IHKQML3PGC">Room Sensors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sensors'))</a></td>
+<td class="column2">5</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDU0ICRJ1GIWHBCDUUJYWJNWUQHPSOYFZKCZ4PYOGEUGU5RYRKJQBH">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID4OJ0ZQHNUOSAGBRRGMEFEUQBIMMCJTPLHCHYYVE5KXK5ONHLXPCP">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOQWNQPPSTLN2FRG4RBXINVN0RI2GKC2IGSCDIWHBAV4BISKLEPFO">Silk to Silk (Clearance=0.178mm) (All),(All)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID1EGKNMHFRBE3LHNM03W5TCUP4JO3VOUH0EEP2WJI10MWOU4YBJTE">Silk To Solder Mask (Clearance=0.076mm) (IsPad),(All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDCC5CL1VPRXNDLRJ1ONB0RYYJEIZJZX0MPNIEZSHPPHWKJNUFPN2">Minimum Solder Mask Sliver (Gap=0.025mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDA00XVEHM51NCKGSHGAQMAHBCEHMFEFNI5455CAGJPNE2ZMD2TZ1B">Hole To Hole Clearance (Gap=0.178mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID3ARZJFJGH2A4KI5COQVYNXRFINT5PLG0LJBW5NKBCBCRUW12DYYF">Hole Size Constraint (Min=0.025mm) (Max=5.08mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDWCYNH5NFIBMANRI1QVSDVMSGPPSXF5Y1FAJSA3QNF55RQCGBFZG">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDZYSOJ53XMN0FI1GIC3T13HP2NORC05NECVGPHGPQXMEZLTYC0A0H">Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBPFJUH0UVS23EFOR52OCEWI4CLG1QUV4VPFENIGJ4PY2EZLF1OGJ">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID4ZBIFV5CWKKZGWIHCGW3FIBHXINYFS5ISQU4XZGSRPNVDTGMB13H">Clearance Constraint (Gap=0.178mm) (All),(All)</a></td>
+<td class="column2">7</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDSNY4NKIZG1Y4E1PRMKEWSBHTFHGUELUBWMSBTXEFKAPCRZGQXIIB">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">9</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGPEG2UFOFURSKSCH4TLH5NN3KFQCJ0X2O13EHACI4FCEFK4HL2XE">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">8</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">55</td>
+</tr>
+</table><br><a name="IDKG23GZ0CPLSTL4VKP5OZ2WGRCQ1MDHP25L4RKLD3HNDPEOGIOON"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board'))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4086.614mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3235.236mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4086.614mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3235.236mil|Absolute=True">Room Definition: Between SMT Small Component R10-DBGACK PD (5.35mm,13.6mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4151.575mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3226.535mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4151.575mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3226.535mil|Absolute=True">Room Definition: Between SMT Small Component C4-Cap Semi (7.4mm,11.15mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4305.118mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3226.535mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4305.118mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3226.535mil|Absolute=True">Room Definition: Between SMT Small Component C3-Cap Semi (11.3mm,9.05mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4319.882mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3226.535mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4319.882mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3226.535mil|Absolute=True">Room Definition: Between SMT Small Component R9-DBGACK PD (11.275mm,12.875mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4990.157mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3986.22mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4990.157mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3986.22mil|Absolute=True">Room Definition: Between LCC Component U1-STM32F417VET6 (36.425mm,25.2mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4303.15mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3589.566mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4303.15mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3589.566mil|Absolute=True">Room Definition: Between SOIC Component T1-TLE8250GVIO (13.025mm,20.075mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3956.299mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3653.08mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3956.299mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3653.08mil|Absolute=True">Room Definition: Between DIP Component P1-Header 3X2 (2.81mm,22.69mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4857.282mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3472.44mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4857.282mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3472.44mil|Absolute=True">Room Definition: Between SMT Small Component C1-Cap Semi (25.325mm,18.825mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4331.694mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3695.866mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4331.694mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3695.866mil|Absolute=True">Room Definition: Between SMT Small Component C2-Cap Semi (13.025mm,25.55mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4972.443mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3226.535mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4972.443mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3226.535mil|Absolute=True">Room Definition: Between SMT Small Component R1-RTCK PD (27.85mm,10.425mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4668.308mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3226.535mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4668.308mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3226.535mil|Absolute=True">Room Definition: Between SMT Small Component R2-DBGRQ PD (20.125mm,11.2mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4569.882mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3226.535mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4569.882mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3226.535mil|Absolute=True">Room Definition: Between SMT Small Component R3-DBGACK PD (17.625mm,11.175mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4917.323mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3226.535mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4917.323mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3226.535mil|Absolute=True">Room Definition: Between SMT Small Component R4-RTCK PD (27.1mm,13.1mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5110.236mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3226.535mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5110.236mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3226.535mil|Absolute=True">Room Definition: Between SMT Small Component R5-RTCK PD (31.35mm,8.475mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4820.866mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3226.535mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4820.866mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3226.535mil|Absolute=True">Room Definition: Between SMT Small Component R6-RTCK PD (24mm,10.125mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5221.457mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3226.535mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5221.457mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3226.535mil|Absolute=True">Room Definition: Between SMT Small Component R7-RTCK PD (34.175mm,8.525mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5355.315mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3226.535mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5355.315mil|Location2.X=7257.244mil|Location1.Y=2705.841mil|Location2.Y=3226.535mil|Absolute=True">Room Definition: Between SMT Small Component R8-RTCK PD (37.575mm,8.55mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4446.725mil|Location2.X=7257.244mil|Location1.Y=2705.316mil|Location2.Y=3226.535mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4446.725mil|Location2.X=7257.244mil|Location1.Y=2705.316mil|Location2.Y=3226.535mil|Absolute=True">Room Definition: Between DIP Component JTAG_20-JTAG-20 (40.6mm,5.3mm) on Top Layer And Room apogee_detection_board (Bounding Region = (158.183mm, 68.728mm, 184.334mm, 81.954mm) (InComponentClass('apogee_detection_board')) </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDIMQ4HCMCHH1HCSCVKMOYNJHL3I1XLPBSK2KMIKDDL2IHKQML3PGC"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Room Sensors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sensors'))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4770.732mil|Location1.Y=0mil|Location2.Y=3928.213mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4770.732mil|Location1.Y=0mil|Location2.Y=3928.213mil|Absolute=True">Room Definition: Between Component A1-LIS331HH Accelerometer (19.625mm,29.725mm) on Top Layer And Room Sensors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sensors')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4814.04mil|Location1.Y=0mil|Location2.Y=3641.732mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4814.04mil|Location1.Y=0mil|Location2.Y=3641.732mil|Absolute=True">Room Definition: Between SOIC Component B1-MS5607-02BA Barometer (20.875mm,24.225mm) on Top Layer And Room Sensors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sensors')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=5788.386mil|Location1.Y=0mil|Location2.Y=3669.29mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=5788.386mil|Location1.Y=0mil|Location2.Y=3669.29mil|Absolute=True">Room Definition: Between SMT Small Component CS1-Cap Semi (46.975mm,23.825mm) on Top Layer And Room Sensors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sensors')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=5537.402mil|Location1.Y=0mil|Location2.Y=3078.742mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=5537.402mil|Location1.Y=0mil|Location2.Y=3078.742mil|Absolute=True">Room Definition: Between SMT Small Component RS1-Res3 (40.35mm,10.275mm) on Top Layer And Room Sensors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sensors')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=5536.416mil|Location1.Y=0mil|Location2.Y=3207.678mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=5536.416mil|Location1.Y=0mil|Location2.Y=3207.678mil|Absolute=True">Room Definition: Between SMT Small Component RS2-Res3 (40.325mm,13.55mm) on Top Layer And Room Sensors (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sensors')) </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDU0ICRJ1GIWHBCDUUJYWJNWUQHPSOYFZKCZ4PYOGEUGU5RYRKJQBH"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Modified Polygon (Allow modified: No), (Allow shelved: No)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3899.606mil|Location2.X=6183.071mil|Location1.Y=2650.59mil|Location2.Y=4934.055mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3899.606mil|Location2.X=6183.071mil|Location1.Y=2650.59mil|Location2.Y=4934.055mil|Absolute=True">Modified Polygon: Polygon Not Repour After Edit  (Ground Plane) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4102.362mil|Location2.X=5599.409mil|Location1.Y=3695.866mil|Location2.Y=4131.89mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4102.362mil|Location2.X=5599.409mil|Location1.Y=3695.866mil|Location2.Y=4131.89mil|Absolute=True">Modified Polygon: Polygon Not Repour After Edit  (3.3V_L01_P002) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID4OJ0ZQHNUOSAGBRRGMEFEUQBIMMCJTPLHCHYYVE5KXK5ONHLXPCP"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Net Antennae (Tolerance=0mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4062.366mil|Location2.X=4085.955mil|Location1.Y=3215.909mil|Location2.Y=3250.109mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4062.366mil|Location2.X=4085.955mil|Location1.Y=3215.909mil|Location2.Y=3250.109mil|Absolute=True">Net Antennae: Track (2.81mm,16.115mm)(4.35mm,14.575mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4334.02mil|Location2.X=4357.608mil|Location1.Y=3215.909mil|Location2.Y=3250.109mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4334.02mil|Location2.X=4357.608mil|Location1.Y=3215.909mil|Location2.Y=3250.109mil|Absolute=True">Net Antennae: Track (11.25mm,14.575mm)(12.39mm,15.715mm) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDOQWNQPPSTLN2FRG4RBXINVN0RI2GKC2IGSCDIWHBAV4BISKLEPFO"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=0.178mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4539.103mil|Location2.X=4547.353mil|Location1.Y=2733.475mil|Location2.Y=2741.725mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4539.103mil|Location2.X=4547.353mil|Location1.Y=2733.475mil|Location2.Y=2741.725mil|Absolute=True">Silk To Silk Clearance Constraint: (0.044mm &lt; 0.178mm) Between Text "20" (16.216mm,3.268mm) on Top Overlay And Track (16.47mm,1.49mm)(16.47mm,6.57mm) on Top Overlay Silk Text to Silk Clearance [0.044mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4539.103mil|Location2.X=4547.353mil|Location1.Y=2833.475mil|Location2.Y=2841.725mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4539.103mil|Location2.X=4547.353mil|Location1.Y=2833.475mil|Location2.Y=2841.725mil|Absolute=True">Silk To Silk Clearance Constraint: (0.044mm &lt; 0.178mm) Between Text "19" (16.216mm,5.808mm) on Top Overlay And Track (16.47mm,1.49mm)(16.47mm,6.57mm) on Top Overlay Silk Text to Silk Clearance [0.044mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID1EGKNMHFRBE3LHNM03W5TCUP4JO3VOUH0EEP2WJI10MWOU4YBJTE"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=0.076mm) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4335.277mil|Location2.X=4339.527mil|Location1.Y=3300.669mil|Location2.Y=3304.919mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4335.277mil|Location2.X=4339.527mil|Location1.Y=3300.669mil|Location2.Y=3304.919mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.013mm &lt; 0.076mm) Between Text "R9" (10.919mm,14.899mm) on Top Overlay And Pad T1-5(11.12mm,17.475mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.013mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDZYSOJ53XMN0FI1GIC3T13HP2NORC05NECVGPHGPQXMEZLTYC0A0H"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6063.462mil|Location2.X=6104.582mil|Location1.Y=2775.074mil|Location2.Y=2814.921mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6063.462mil|Location2.X=6104.582mil|Location1.Y=2775.074mil|Location2.Y=2814.921mil|Absolute=True">Width Constraint: Track (54.95mm,3.15mm)(55.05mm,3.25mm) on Top Layer Actual Width = 0mm, Target Width = 0.254mm</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID4ZBIFV5CWKKZGWIHCGW3FIBHXINYFS5ISQU4XZGSRPNVDTGMB13H"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=0.178mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4708.781mil|Location2.X=4714.448mil|Location1.Y=3914.49mil|Location2.Y=3920.156mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4708.781mil|Location2.X=4714.448mil|Location1.Y=3914.49mil|Location2.Y=3920.156mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.178mm) Between Track (20.625mm,32.175mm)(20.625mm,33.725mm) on Top Layer And Pad A1-11(20.625mm,32.175mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5455.828mil|Location2.X=5461.494mil|Location1.Y=3058.191mil|Location2.Y=3063.858mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5455.828mil|Location2.X=5461.494mil|Location1.Y=3058.191mil|Location2.Y=3063.858mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.178mm) Between Track (39.6mm,10.425mm)(39.675mm,10.35mm) on Top Layer And Pad RS1-1(39.6mm,10.275mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5444.016mil|Location2.X=5449.683mil|Location1.Y=3058.191mil|Location2.Y=3063.858mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5444.016mil|Location2.X=5449.683mil|Location1.Y=3058.191mil|Location2.Y=3063.858mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.178mm) Between Track (39.3mm,10.425mm)(39.6mm,10.425mm) on Top Layer And Pad RS1-1(39.6mm,10.275mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5458.781mil|Location2.X=5464.447mil|Location1.Y=3055.239mil|Location2.Y=3060.905mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5458.781mil|Location2.X=5464.447mil|Location1.Y=3055.239mil|Location2.Y=3060.905mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.178mm) Between Track (39.675mm,7.875mm)(39.675mm,10.35mm) on Top Layer And Pad RS1-1(39.6mm,10.275mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5444.016mil|Location2.X=5449.683mil|Location1.Y=3058.191mil|Location2.Y=3063.858mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5444.016mil|Location2.X=5449.683mil|Location1.Y=3058.191mil|Location2.Y=3063.858mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.178mm) Between Track (38.425mm,11.3mm)(39.3mm,10.425mm) on Top Layer And Pad RS1-1(39.6mm,10.275mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5454.844mil|Location2.X=5460.511mil|Location1.Y=3181.222mil|Location2.Y=3186.888mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5454.844mil|Location2.X=5460.511mil|Location1.Y=3181.222mil|Location2.Y=3186.888mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.178mm) Between Track (39.575mm,11.975mm)(39.575mm,13.55mm) on Top Layer And Pad RS2-1(39.575mm,13.55mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5454.844mil|Location2.X=5460.511mil|Location1.Y=3181.222mil|Location2.Y=3186.888mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5454.844mil|Location2.X=5460.511mil|Location1.Y=3181.222mil|Location2.Y=3186.888mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.178mm) Between Track (38.925mm,14.2mm)(39.575mm,13.55mm) on Top Layer And Pad RS2-1(39.575mm,13.55mm) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDSNY4NKIZG1Y4E1PRMKEWSBHTFHGUELUBWMSBTXEFKAPCRZGQXIIB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4088.52mil|Location2.X=4228.409mil|Location1.Y=3117.063mil|Location2.Y=3174.276mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4088.52mil|Location2.X=4228.409mil|Location1.Y=3117.063mil|Location2.Y=3174.276mil|Absolute=True">Un-Routed Net Constraint: Net NetC4_2 Between Pad R10-1(5.35mm,12.85mm) on Top Layer And Pad C4-2(7.4mm,12.5mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4307.024mil|Location2.X=4381.953mil|Location1.Y=3034.386mil|Location2.Y=3145.732mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4307.024mil|Location2.X=4381.953mil|Location1.Y=3034.386mil|Location2.Y=3145.732mil|Absolute=True">Un-Routed Net Constraint: Net NetC3_2 Between Pad R9-1(11.275mm,12.125mm) on Top Layer And Pad C3-2(11.3mm,10.4mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4702.693mil|Location2.X=5481.363mil|Location1.Y=3306.039mil|Location2.Y=3928.213mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4702.693mil|Location2.X=5481.363mil|Location1.Y=3306.039mil|Location2.Y=3928.213mil|Absolute=True">Un-Routed Net Constraint: Net NetA1_11 Between Pad A1-11(20.625mm,32.175mm) on Top Layer And Pad U1-95(39.925mm,17.65mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4244.488mil|Location2.X=5023.228mil|Location1.Y=2853.74mil|Location2.Y=3160.039mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4244.488mil|Location2.X=5023.228mil|Location1.Y=2853.74mil|Location2.Y=3160.039mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C3-1(11.3mm,7.7mm) on Top Layer And Track (26mm,10.4mm)(26.775mm,11.175mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4090.945mil|Location2.X=5023.228mil|Location1.Y=2936.417mil|Location2.Y=3160.039mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4090.945mil|Location2.X=5023.228mil|Location1.Y=2936.417mil|Location2.Y=3160.039mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C4-1(7.4mm,9.8mm) on Top Layer And Track (26mm,10.4mm)(26.775mm,11.175mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4883.858mil|Location2.X=5475.457mil|Location1.Y=3162.339mil|Location2.Y=3786.417mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4883.858mil|Location2.X=5475.457mil|Location1.Y=3162.339mil|Location2.Y=3786.417mil|Absolute=True">Un-Routed Net Constraint: Pad RS2-1(39.575mm,13.55mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5422.181mil|Location2.X=5476.441mil|Location1.Y=3033.403mil|Location2.Y=3384.905mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5422.181mil|Location2.X=5476.441mil|Location1.Y=3033.403mil|Location2.Y=3384.905mil|Absolute=True">Un-Routed Net Constraint: Net NetA1_6 Between Pad U1-93(38.925mm,17.65mm) on Top Layer And Pad RS1-1(39.6mm,10.275mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3970.866mil|Location2.X=4210.236mil|Location1.Y=3124.409mil|Location2.Y=3315.551mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3970.866mil|Location2.X=4210.236mil|Location1.Y=3124.409mil|Location2.Y=3315.551mil|Absolute=True">Un-Routed Net Constraint: Net CANL Between Track (2.81mm,16.115mm)(4.35mm,14.575mm) on Top Layer And Pad R10-2(5.35mm,14.35mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4010.236mil|Location2.X=4442.52mil|Location1.Y=3115.551mil|Location2.Y=3324.409mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4010.236mil|Location2.X=4442.52mil|Location1.Y=3115.551mil|Location2.Y=3324.409mil|Absolute=True">Un-Routed Net Constraint: Net CANL Between Pad R10-2(5.35mm,14.35mm) on Top Layer And Track (11.25mm,14.575mm)(12.39mm,15.715mm) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDGPEG2UFOFURSKSCH4TLH5NN3KFQCJ0X2O13EHACI4FCEFK4HL2XE"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Short-Circuit Constraint (Allowed=No) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4702.359mil|Location2.X=4720.87mil|Location1.Y=3908.963mil|Location2.Y=3927.474mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4702.359mil|Location2.X=4720.87mil|Location1.Y=3908.963mil|Location2.Y=3927.474mil|Absolute=True">Short-Circuit Constraint: Between Track (20.625mm,32.175mm)(20.625mm,33.725mm) on Top Layer And Pad A1-11(20.625mm,32.175mm) on Top Layer Location : [X = 119.675mm][Y = 99.523mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5449.34mil|Location2.X=5470.935mil|Location1.Y=3048.751mil|Location2.Y=3070.346mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5449.34mil|Location2.X=5470.935mil|Location1.Y=3048.751mil|Location2.Y=3070.346mil|Absolute=True">Short-Circuit Constraint: Between Track (39.6mm,10.425mm)(39.675mm,10.35mm) on Top Layer And Pad RS1-1(39.6mm,10.275mm) on Top Layer Location : [X = 138.687mm][Y = 77.713mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5442.093mil|Location2.X=5466.548mil|Location1.Y=3048.797mil|Location2.Y=3073.252mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5442.093mil|Location2.X=5466.548mil|Location1.Y=3048.797mil|Location2.Y=3073.252mil|Absolute=True">Short-Circuit Constraint: Between Track (39.3mm,10.425mm)(39.6mm,10.425mm) on Top Layer And Pad RS1-1(39.6mm,10.275mm) on Top Layer Location : [X = 138.54mm][Y = 77.75mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5446.258mil|Location2.X=5476.97mil|Location1.Y=3034.931mil|Location2.Y=3065.642mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5446.258mil|Location2.X=5476.97mil|Location1.Y=3034.931mil|Location2.Y=3065.642mil|Absolute=True">Short-Circuit Constraint: Between Track (39.675mm,7.875mm)(39.675mm,10.35mm) on Top Layer And Pad RS1-1(39.6mm,10.275mm) on Top Layer Location : [X = 138.725mm][Y = 77.477mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5438.95mil|Location2.X=5457.879mil|Location1.Y=3053.6mil|Location2.Y=3072.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5438.95mil|Location2.X=5457.879mil|Location1.Y=3053.6mil|Location2.Y=3072.528mil|Absolute=True">Short-Circuit Constraint: Between Track (38.425mm,11.3mm)(39.3mm,10.425mm) on Top Layer And Pad RS1-1(39.6mm,10.275mm) on Top Layer Location : [X = 138.39mm][Y = 77.802mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5443.683mil|Location2.X=5471.672mil|Location1.Y=3163.751mil|Location2.Y=3191.74mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5443.683mil|Location2.X=5471.672mil|Location1.Y=3163.751mil|Location2.Y=3191.74mil|Absolute=True">Short-Circuit Constraint: Between Track (39.575mm,11.975mm)(39.575mm,13.55mm) on Top Layer And Pad RS2-1(39.575mm,13.55mm) on Top Layer Location : [X = 138.625mm][Y = 80.715mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5437.03mil|Location2.X=5469.642mil|Location1.Y=3174.058mil|Location2.Y=3206.67mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5437.03mil|Location2.X=5469.642mil|Location1.Y=3174.058mil|Location2.Y=3206.67mil|Absolute=True">Short-Circuit Constraint: Between Track (38.925mm,14.2mm)(39.575mm,13.55mm) on Top Layer And Pad RS2-1(39.575mm,13.55mm) on Top Layer Location : [X = 138.515mm][Y = 81.035mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4998.739mil|Location2.X=5043.645mil|Location1.Y=3856.483mil|Location2.Y=3901.389mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Isaac\Documents\School\Rocket\Flight-Hardware-2017-2018\Apogee Detect\ApDet.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4998.739mil|Location2.X=5043.645mil|Location1.Y=3856.483mil|Location2.Y=3901.389mil|Absolute=True">Short-Circuit Constraint: Between Track (27.6mm,31.2mm)(28.875mm,31.2mm) on Top Layer And Pad U1-51(28.875mm,31.2mm) on Top Layer Location : [X = 127.538mm][Y = 98.525mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

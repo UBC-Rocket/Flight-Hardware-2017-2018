@@ -1,0 +1,38 @@
+Added Component: Designator=C5(RAD-0.3)
+Added Component: Designator=IC1(SO16)
+Added Component: Designator=IC?(SO16)
+Added Component: Designator=Micro(MICROSD)
+Added Component: Designator=P2(HDR2X3)
+Added Pin To Net: NetName=GND Pin=C5-1
+Added Pin To Net: NetName=3.3V Pin=C5-2
+Added Pin To Net: NetName=NetIC1_2 Pin=IC1-2
+Added Pin To Net: NetName=CLK Pin=IC1-3
+Added Pin To Net: NetName=NetIC1_4 Pin=IC1-4
+Added Pin To Net: NetName=MOSI Pin=IC1-5
+Added Pin To Net: NetName=NetIC1_6 Pin=IC1-6
+Added Pin To Net: NetName=CS Pin=IC1-7
+Added Pin To Net: NetName=CLK Pin=IC1-9
+Added Pin To Net: NetName=NetIC1_10 Pin=IC1-10
+Added Pin To Net: NetName=GND Pin=IC1-11
+Added Pin To Net: NetName=GND Pin=IC1-14
+Added Pin To Net: NetName=3.3V Pin=IC?-1
+Added Pin To Net: NetName=GND Pin=IC?-8
+Added Pin To Net: NetName=NetIC1_6 Pin=Micro-2
+Added Pin To Net: NetName=NetIC1_4 Pin=Micro-3
+Added Pin To Net: NetName=3.3V Pin=Micro-4
+Added Pin To Net: NetName=NetIC1_2 Pin=Micro-5
+Added Pin To Net: NetName=GND Pin=Micro-6
+Added Pin To Net: NetName=MISO Pin=Micro-7
+Added Pin To Net: NetName=GND Pin=Micro-MT1
+Added Pin To Net: NetName=GND Pin=Micro-MT2
+Added Pin To Net: NetName=CANH Pin=P2-1
+Added Pin To Net: NetName=3.3V Pin=P2-2
+Added Pin To Net: NetName=GND Pin=P2-3
+Added Pin To Net: NetName=5V Pin=P2-4
+Added Pin To Net: NetName=CANL Pin=P2-5
+Added Pin To Net: NetName=24V Pin=P2-6
+Added Member To Class: ClassName=apogee_detection_board Member=Component C5 Cap
+Added Member To Class: ClassName=apogee_detection_board Member=Component IC1 4050D
+Added Member To Class: ClassName=apogee_detection_board Member=Component IC? 4050D
+Added Member To Class: ClassName=apogee_detection_board Member=Component Micro 
+Added Member To Class: ClassName=apogee_detection_board Member=Component P2 Header 3X2

@@ -1,0 +1,21 @@
+Removed Member From Class: ClassName=apogee_detection_board Member=R11
+Removed Member From Class: ClassName=apogee_detection_board Member=R12
+Added Component: Designator=C3(C1206)
+Added Component: Designator=C4(C1206)
+Added Component: Designator=R10(J1-0603)
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=GND Pin=C4-1
+Added Pin To Net: NetName=NetP1_1 Pin=P2-1
+Added Pin To Net: NetName=NetP1_5 Pin=P2-5
+Added Pin To Net: NetName=NetP1_5 Pin=R10-2
+Added Pin To Net: NetName=NetP1_5 Pin=T1-6
+Added Pin To Net: NetName=NetP1_1 Pin=T1-7
+Added Pin To Net: NetName=NetC3_2 Pin=C3-2
+Added Pin To Net: NetName=NetC3_2 Pin=R9-1
+Added Net: Name=NetC3_2
+Added Pin To Net: NetName=NetC4_2 Pin=C4-2
+Added Pin To Net: NetName=NetC4_2 Pin=R10-1
+Added Net: Name=NetC4_2
+Added Member To Class: ClassName=apogee_detection_board Member=Component C3 Cap Semi
+Added Member To Class: ClassName=apogee_detection_board Member=Component C4 Cap Semi
+Added Member To Class: ClassName=apogee_detection_board Member=Component R10 DBGACK PD

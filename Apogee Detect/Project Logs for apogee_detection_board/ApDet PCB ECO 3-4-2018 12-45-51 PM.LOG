@@ -1,0 +1,10 @@
+Added Component: Designator=J1(HRS_DM3AT-SF-PEJM5_DM3AT-SF-PEJM5(Primary))
+Added Component: Designator=P2(HDR2X3)
+Added Pin To Net: NetName=CANH Pin=P2-1
+Added Pin To Net: NetName=3.3V Pin=P2-2
+Added Pin To Net: NetName=GND Pin=P2-3
+Added Pin To Net: NetName=5V Pin=P2-4
+Added Pin To Net: NetName=CANL Pin=P2-5
+Added Pin To Net: NetName=24V Pin=P2-6
+Added Member To Class: ClassName=apogee_detection_board Member=Component J1 DM3AT-SF-PEJM5
+Added Member To Class: ClassName=apogee_detection_board Member=Component P2 Header 3X2
